@@ -1,35 +1,14 @@
-<!doctype html>
-<html lang="en-us">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Representation of the Orient in The New York Times</title>
-        <meta name="description" content="Using the NYT-API to explore the representation of the orient in The New York Times. A student project.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
-
-        <link rel="stylesheet" type="text/css" href="styles/main.css">
-		<link rel="stylesheet" type="text/css" href="styles/jqueryui.css">
-    </head>
-
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+	</head>
 	<body>
-		<!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-		<header>
-			<h1>Representation of the Orient in The New York Times</h1>
-			<hr>
-			<p class="credits">R. Chavers R. Korteschiel E. Martinius E. van Zummeren<a href="#" id="twentyfiveSeventyfive"/>25/75 </a><a href="#" id="fiftyFifty"/>50/50 </a><a href="#" id="seventyfiveTwentyfive"/>75/25 </a><a href="#" id="makeGray"/>GRAY </a><a href="#" id="makeColor"/>IK WIL KLEURTJES</a></p>
 
-			<!--TIIJDELIJK-->
-			<div id="sorts" class="button-group">
-			  <button class="button is-checked" data-sort-value="original-order">original order</button>
-			  <button class="button" data-sort-value="saturation">saturation</button>
-			  <button class="button" data-sort-value="hue">hue</button>
-			  <button class="button" data-sort-value="brightness">brightness</button>
-			  <button class="button" data-sort-value="complexity">complexity</button>
-			</div>
+		<header>
+			<h1>Representation of the Orient in the New York Times</h1>
+			<hr>
+			<p class="credits">R. Chavers R. Korteschiel E. Martinius E. van Zummeren<a href="#" id="twentyfiveSeventyfive"/>25/75 </a><a href="#" id="fiftyFifty"/>50/50 </a><a href="#" id="seventyfiveTwentyfive"/>75/25 </a><a href="#" id="makeGray"/>GRAY </a><a href="#" id="makeColor"/>IK WIL KLEURTJES</a><a href="#" />ANDER LAND</a><a id="shuffle-button" href="#"/> SHUFFLEBUFFEL</a></p>
 
 		</header>
 
@@ -41,188 +20,129 @@
 					<img class="icon-eye" src="images/icon_eye.png"/>
 					<span class="icon-desc">show all</span>
 				</button>
+
 				<button class="filterbutton" data-filter=".man">
 					<img class="icon-burqa" src="images/icon_burqa.png"/>
 					<span class="icon-desc">burqa</span></button>
+
 				<button class="filterbutton" data-filter=".violence">
 					<img class="icon-violence" src="images/icon_violence.png"/>
 					<span class="icon-desc">violence</span>
 				</button>
 			</div>
+
+			<div class="sortbar">
+				<div id="sorts" class="button-group">
+				<span class="sortdesc">Sort</span>
+
+			
+			  <button class="sortbutton is-checked tooltip" title="Original order" data-sort-value="original-order">
+			  		<img class="sorticon icon-original" src="images/icon_original.png"/>
+			  </button>
+			  <button id="shuffle-button" class="sortbutton tooltip" title="Shuffle">
+					<img class="sorticon icon-shuffle" src="images/icon_shuffle.png"/>
+			  </button>
+			  <button class="sortbutton tooltip" title="Sort by brightness" data-sort-value="brightness">
+					<img class="sorticon icon-brightness" src="images/icon_brightness.png"/>
+			  </button>
+			  <button class="sortbutton tooltip" title="Sort by hue" data-sort-value="hue">
+					<img class="sorticon icon-hue" src="images/icon_hue.png"/>
+			  </button>
+			  <button class="sortbutton tooltip" title="Sort by saturation" data-sort-value="saturation">
+					<img class="sorticon icon-saturation" src="images/icon_saturation.png"/>
+			  </button>
+			  <button class="sortbutton tooltip" title="Sort by the number of shapes" data-sort-value="shapes">
+			  		<img class="sorticon icon-shapes" src="images/icon_shapes.png"/>
+			  </button>
+			</div>
+
+			</div>
 		</section>
 
 		<!-- Dit moet nog goed opgelost worden -->
-		<img class="imagetag" src="images/imperialism.svg"/>
+		
 
 		<!-- START ISOTOPES -->
 		<main id="container">
 
-			<section id="imperialcountry" class="division">	
-				
+			<section id="imperialcountry" class="division">
+				<div class="countrylist">
+					<a href="#" id="imperialClick"><img class="countrylistLoop" src="images/countrylist_loop.svg"/></a>
+				</div>	
+
+				<img id="imperialUsa" class="imagetag" src="images/imperialism.svg"/>
 				<div class="shadowgradiant"></div>
 
-				<div class="nytPhoto">
-					<img class="fluid" src="images/us02.jpg" alt="" />
-					<span class="saturation">8</span>
-					<span class="brightness">79</span>
-					<span class="hue">79</span>
-					<span class="complexity">79</span>
-				</div>
-				
-				<div class="nytPhoto man">
-					<img class="fluid" src="images/us03.jpg" alt="" />
-					<span class="saturation">100</span>
-					<span class="brightness">192</span>
-					<span class="hue">23</span>
-					<span class="complexity">82</span>
-				</div>
-				
-				<div class="nytPhoto">
-					<img class="fluid" src="images/us01.jpg" alt="" />
-					<span class="saturation">48</span>
-					<span class="brightness">9</span>
-					<span class="hue">69</span>
-					<span class="complexity">139</span>
-				</div>
-				
-				<div class="nytPhoto">
-					<img class="fluid" src="images/us04.jpg" alt="" />
-					<span class="saturation">1</span>
-					<span class="brightness">19</span>
-					<span class="hue">49</span>
-					<span class="complexity">89</span>
-				</div>
-				
-				<div class="nytPhoto man">
-					<img class="fluid" src="images/us05.jpg" alt="" />
-				</div>
-				
-				<div class="nytPhoto">
-					<img class="fluid" src="images/us06.jpg" alt="" />
-				</div>
-				
-				<div class="nytPhoto man">
-					<img class="fluid" src="images/us07.jpg" alt="" />
-				</div>
-				
-				<div class="nytPhoto violence">
-					<img class="fluid" src="images/us08.jpg" alt="" />
-				</div>
-				
-				<div class="nytPhoto man">
-					<img class="fluid" src="images/us05.jpg" alt="" />
-				</div>
-				
-				<div class="nytPhoto">
-					<img class="fluid" src="images/us03.jpg" alt="" />
-				</div>
-				
-				<div class="nytPhoto">
-					<img class="fluid" src="images/us06.jpg" alt="" />
-				</div>
-				
-				<div class="nytPhoto">
-					<img class="fluid" src="images/us01.jpg" alt="" />
-				</div>
-				<div class="nytPhoto">
-					<img class="fluid" src="images/us02.jpg" alt="" />
-				</div>
 			</section>
 
 			<section id="orientalcountry" class="division">
-				<div class="countrylist">
-					<img class="countrylistLoop" src="images/countrylist_loop.svg"/>
-				</div>
 				<img class="imagetag floatright" src="images/orientalism.svg"/>
 				<div class="shadowgradiant"></div>	
 
-				<div class="nytPhoto">
-					<img class="fluid" src="images/iq02.jpg" alt="" />
-					<span class="saturation">8</span>
-					<span class="brightness">79</span>
-					<span class="hue">79</span>
-					<span class="complexity">79</span>		
-				</div>
 				
-				<div class="nytPhoto man">
-					<img class="fluid" src="images/iq01.jpg" alt="" />
-					<span class="saturation">2</span>
-					<span class="brightness">39</span>
-					<span class="hue">39</span>
-					<span class="complexity">29</span>		
-				</div>
-				<div class="nytPhoto">
-					<img class="fluid" src="images/iq03.jpg" alt="" />
-					<span class="saturation">4</span>
-					<span class="brightness">719</span>
-					<span class="hue">739</span>
-					<span class="complexity">749</span>
-				</div>
-				<div class="nytPhoto">
-					<img class="fluid" src="images/iq04.jpg" alt="" />
-				</div>
-				<div class="nytPhoto">
-					<img class="fluid" src="images/iq05.jpg" alt="" />
-				</div>
-				<div class="nytPhoto">
-					<img class="fluid" src="images/iq06.jpg" alt="" />
-				</div>
-				<div class="nytPhoto">
-					<img class="fluid" src="images/iq05.jpg" alt="" />
-				</div>
-				<div class="nytPhoto">
-					<img class="fluid" src="images/iq03.jpg" alt="" />
-				</div>
-				
-				<div class="nytPhoto">
-					<img class="fluid" src="images/iq05.jpg" alt="" />
-				</div>
-				<div class="nytPhoto man">
-					<img class="fluid" src="images/iq02.jpg" alt="" />
-				</div>
-				<div class="nytPhoto">
-					<img class="fluid" src="images/iq05.jpg" alt="" />
-				</div>
-				<div class="nytPhoto man">
-					<img class="fluid" src="images/iq03.jpg" alt="" />
-				</div>
-				
-				<div class="nytPhoto violence">
-					<img class="fluid" src="images/iq05.jpg" alt="" />
-				</div>
-				<div class="nytPhoto">
-					<img class="fluid" src="images/iq02.jpg" alt="" />
-				</div><div class="nytPhoto">
-					<img class="fluid" src="images/iq05.jpg" alt="" />
-				</div>
-				<div class="nytPhoto violence">
-					<img class="fluid" src="images/iq03.jpg" alt="" />
-				</div>
-				
-				<div class="nytPhoto">
-					<img class="fluid" src="images/iq05.jpg" alt="" />
-				</div>
-				<div class="nytPhoto">
-					<img class="fluid" src="images/iq02.jpg" alt="" />
-				</div><div class="nytPhoto">
-					<img class="fluid" src="images/iq05.jpg" alt="" />
-				</div>
-				<div class="nytPhoto">
-					<img class="fluid" src="images/iq03.jpg" alt="" />
-				</div>
-				
-				<div class="nytPhoto">
-					<img class="fluid" src="images/iq05.jpg" alt="" />
-				</div>
-				<div class="nytPhoto">
-					<img class="fluid" src="images/iq02.jpg" alt="" />
-				</div>	
 			</section>
 		</main>
 
 		<script src="/vendor/jquery.min.js"></script>
 		<script src="/vendor/isotope.pkgd.min.js"></script>
+		<script src="/vendor/imagesloaded.pkgd.min.js"></script>
 		<script src="/vendor/jquery-ui.min.js"></script>
 		<script src="/scripts/app.js"></script>
+
+		<script>
+
+
+		function importDataChina() {
+			var data = $.ajax({
+				url: "data/linkUpdatedValidJSONUnited+States.json",
+				dataType: "json",
+				success: function(data){
+					console.log(data);
+					imperialImages(data, "China");
+				},
+				error: function(obj, err, errObj){
+					console.error("Loading the JSON did not go as planned: " + err);
+				}
+			});
+			return data;
+		}
+
+		function importDataIran() {
+			var data2 = $.ajax({
+				url: "data/linkUpdatedValidJSONAfghanistan.json",
+				dataType: "json",
+				success: function(data){
+					console.log(data);
+					imperialImages(data, "Iran");
+				},
+				error: function(obj, err, errObj){
+					console.error("Loading the JSON did not go as planned: " + err);
+				}
+			});
+			return data2;
+		}
+
+		var data = importDataChina();
+		var data2 = importDataIran();
+
+		function imperialImages(data, country) {
+    		// Creating one long string with all images.
+	    	var imgTags = "";
+
+	    	$(data.docs).each(function(){
+	    		imgTags += "<div class=\"nytPhoto\"><img class=\"fluid\" src=\"images/" +this.multimedia[1].url + "\"/></div>";
+	    	});
+
+	    	// Appending to HTML and event listener.
+	    	if (country == "China"){
+	    		$("#imperialcountry").append(imgTags);
+	    	} else if (country == "Iran") {
+	    		console.log("im run!");
+	    		$("#orientalcountry").append(imgTags);
+	    		isotopeResize();
+	    	}
+    	}
+
+		</script>
 	</body>
 </html>
